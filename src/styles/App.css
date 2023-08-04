@@ -201,3 +201,9 @@
 
 /* Header
 /* ---------------------------------------------------------- */
+.site-head {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #000;
+  background-color: #fff;
+}

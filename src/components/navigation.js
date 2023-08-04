@@ -1,23 +1,30 @@
 import * as React from "react";
-import {Link} from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import His from "./hsdkjf"
-import Home from "./home"
+import { Outlet, NavLink } from "react-router-dom";
 
-const Navigation = (
-    <nav>
-        <ul>
+const Navigation = () => {
+   return (
+      <>
+         <div className="container">
+         <ul className="nav">
             <li>
-               <Link to="/">Home</Link>
+               <NavLink 
+                  to="/">Home
+               </NavLink>
             </li>
             <li>
-               <Link to="/His">Users</Link>
+               <NavLink 
+                  to="/his">Projects
+               </NavLink>
             </li>
             <li>
-               <Link to="/Home ">Contact</Link>
+               <NavLink 
+                  to="/home">Contact
+               </NavLink>
             </li>
          </ul>
-    </nav>
-);
+         <Outlet/>
+         </div>
+      </>
+   )
+};
 export default Navigation;
